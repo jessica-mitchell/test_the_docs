@@ -1,6 +1,6 @@
 ---
 extends: existence
-message: "'%s'"
+message: '"%s" is passive voice; consider changing sentence'
 ignorecase: true
 level: warning
 raw:
@@ -182,3 +182,4 @@ tokens:
   - woven
   - written
   - wrung
+
