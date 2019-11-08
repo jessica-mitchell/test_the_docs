@@ -1,3 +1,3 @@
-So here is a anther test
-There are some problems with simply using a lot of incrrect words.
-gidcolections. It has been done
+Here is a another test
+There are some problems with  using a lot of incorrect words.
+gidcollections.
