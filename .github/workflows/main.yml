@@ -11,6 +11,5 @@ jobs:
       uses: errata-ai/vale-action@v1.0.1
       with:
         config: https://raw.githubusercontent.com/jessica-mitchell/test_the_docs/master/.vale.ini
-        files: doc/
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
