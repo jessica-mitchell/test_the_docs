@@ -24,7 +24,6 @@ author = 'jm'
 # The full version, including alpha/beta/rc tags
 release = '1'
 
-import sphinx_bootstrap_theme
 
 # -- General configuration ---------------------------------------------------
 
@@ -48,68 +47,31 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'bootstrap'
+html_theme = 'sphinx_material'
 html_logo = '_static/img/nest_logo.png'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+html_theme_options = {
+    'base_url': 'http://bashtage.github.io/sphinx-material/',
+    'repo_url': 'https://github.com/nest/nest-simulator/',
+    'repo_name': 'NEST Simulator',
+    'nav_title': 'NEST simulator docs',
+    "nav_links": [
+        {"href": "index", "internal": True, "title": "NEST"},
+        {"href": "www.nest-simulator.org/documentation", "internal": False, "title": "NEST documentation"}
+        ],
+     "heroes": {
+        "index": "Latest news for NEST simulator"
+    },
+    'globaltoc_depth': 1,
+    'color_primary': 'deep-orange',
+    'color_accent': 'white',
+    'master_doc': False,
+}
 
 html_static_path = ['_static']
-
-html_theme_options = {
-    # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "NEST simulator contents",
-
-    # Tab name for entire site. (Default: "Site")
-    'navbar_site_name': "Docs",
-
-    # A list of tuples containing pages or urls to link to.
-    # Valid tuples should be in the following forms:
-    #    (name, page)                 # a link to a page
-    #    (name, "/aa/bb", 1)          # a link to an arbitrary relative url
-    #    (name, "http://example.com", True) # arbitrary absolute url
-    # Note the "1" or "True" value above as the third argument to indicate
-    # an arbitrary url.
-    'navbar_links': [
-        ("NEST docs home", "index.html", True),
-    ],
-
-    # Render the next and previous page links in navbar. (Default: true)
-    'navbar_sidebarrel': False,
-
-    # Render the current pages TOC in the navbar. (Default: true)
-    'navbar_pagenav': False,
-
-    # Tab name for the current pages TOC. (Default: "Page")
-    'navbar_pagenav_name': "Page",
-
-    # Global TOC depth for "site" navbar tab. (Default: 1)
-    # Switching to -1 shows all levels.
-    'globaltoc_depth': 1,
-
-    # Include hidden TOCs in Site navbar?
-    #
-    # Note: If this is "false", you cannot have mixed ``:hidden:`` and
-    # non-hidden ``toctree`` directives in the same page, or else the build
-    # will break.
-    #
-    # Values: "true" (default) or "false"
-    'globaltoc_includehidden': "true",
-
-    # HTML navbar class (Default: "navbar") to attach to <div> element.
-    # For black navbar, do "navbar navbar-inverse"
-    'navbar_class': "navbar",
-
-    # Fix navigation bar to top of page?
-    # Values: "true" (default) or "false"
-    'navbar_fixed_top': "true",
-
-    # Location of link to source.
-    # Options are "nav" (default), "footer" or anything else to exclude.
-    'source_link_position': "footer",
-}
 
 html_sidebars = {'**': ['localtoc.html']}
 html_additional_pages = {'index': 'index.html'}
